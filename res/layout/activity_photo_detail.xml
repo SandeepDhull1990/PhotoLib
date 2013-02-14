@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PhotoDetailActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:layout_weight="0.7"
+        android:padding="5dp" >
+
+        <ImageView
+            android:id="@+id/photoImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/photoAddressTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/photoImageView"
+            android:layout_alignRight="@+id/photoImageView"
+            android:layout_alignLeft="@+id/photoImageView"
+            android:text="Address"
+            android:background="@drawable/address_text_background"
+            android:textSize="14sp"
+            android:ellipsize="end"
+            android:textColor="#aaffffff" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_weight="0.3"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/photoDescriptionEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/photoDescriptionActionView"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="Description"
+            android:inputType="textMultiLine" >
+        </EditText>
+
+        <LinearLayout
+            android:id="@+id/photoDescriptionActionView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/okButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:onClick="uploadImage"
+                android:text="Upload" />
+
+            <Button
+                android:id="@+id/cancelButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:onClick="onCancelClick"
+                android:text="Cancel" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

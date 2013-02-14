@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_weight="0.7">
+
+        <ImageView
+            android:id="@+id/fragment_imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:padding="2dp"
+             />
+        
+        <TextView
+            android:id="@+id/fragment_imageAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/address_text_background"
+            android:textColor="#aaffffff"
+            android:textSize="14sp"
+            android:singleLine="false"
+            android:ellipsize="end"
+            android:text="Address" />
+
+        <LinearLayout
+            android:id="@+id/fragment_loading_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:background="@drawable/progress_background"
+            android:gravity="center"
+            android:minWidth="150dp"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="gone" >
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/loading_status_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@android:color/black"
+                android:text="Loading.."
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </LinearLayout>
+       
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_weight="0.3"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/frament_relative_time_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/fragment_username_textView"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/fragment_username_textView"
+            android:gravity="center_vertical"
+            android:text="1 day ago"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#aaffffff" />
+
+        <TextView
+            android:id="@+id/fragment_description_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/frament_relative_time_textView"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/fragment_user_image"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:singleLine="false"
+            android:text="Description"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#aaffffff" />
+
+        <ImageButton
+            android:id="@+id/fragment_user_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:minWidth="40dp"
+            android:layout_above="@+id/fragment_username_textView"
+            android:background="@android:color/transparent"
+            android:src="@drawable/user" />
+
+        <TextView
+            android:id="@+id/fragment_username_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/fragment_user_image"
+            android:gravity="center"
+            android:text="Username"
+            android:textColor="#aaffffff" />
+    </RelativeLayout>
+
+</LinearLayout>

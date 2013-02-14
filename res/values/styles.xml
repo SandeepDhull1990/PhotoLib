@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Holo">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo">
+        <item name="android:actionBarStyle">@style/CustomActionBar</item>	
+    </style>
+
+    <style name="CustomActionBar" parent="android:Widget.Holo.ActionBar">
+        <item name="android:displayOptions">useLogo|showHome|showTitle</item>
+        <item name="android:background">#232323</item>
+        <item name="android:backgroundSplit">#232323</item>
+        
+    </style>
+
+    <style name="LoginFormContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+</resources>

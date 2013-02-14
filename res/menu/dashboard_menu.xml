@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/actionExplore"
+        android:icon="@drawable/explore2"
+        android:title="Explore"
+        android:showAsAction="always">
+    </item>
+    <item
+        android:id="@+id/actionCamera"
+        android:icon="@android:drawable/ic_menu_camera"
+        android:title="Upload New Photo"
+        android:showAsAction="always">
+    </item>
+    <item
+        android:id="@+id/actionMyImages"
+        android:icon="@drawable/image_my_pics"
+        android:title="View my Photos"
+        android:showAsAction="always">
+    </item>
+
+</menu>
